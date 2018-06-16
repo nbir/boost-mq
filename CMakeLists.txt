@@ -12,3 +12,11 @@ set_property(TARGET boost PROPERTY
 set(TASK_Q_PRODUCER ./1-task-q/producer.cpp)
 add_executable(TaskQProducer ${TASK_Q_PRODUCER})
 target_link_libraries(TaskQProducer LINK_PUBLIC ${Boost_LIBRARIES})
+
+set(TASK_Q_CONSUMER ./1-task-q/consumer.cpp)
+add_executable(TaskQConsumer ${TASK_Q_CONSUMER})
+target_link_libraries(TaskQConsumer LINK_PUBLIC ${Boost_LIBRARIES})
+
+set(TASK_Q_RESET ./1-task-q/reset.cpp)
+add_executable(TaskQReset ${TASK_Q_RESET})
+target_link_libraries(TaskQReset LINK_PUBLIC ${Boost_LIBRARIES})

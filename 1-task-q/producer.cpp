@@ -13,7 +13,7 @@ int main() {
     while (true) {
       mq->send(&counter, sizeof(counter), 0);
 
-      std::cout << "Published..." << counter << std::endl;
+      std::cout << "Published: " << counter << std::endl;
 
       std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
